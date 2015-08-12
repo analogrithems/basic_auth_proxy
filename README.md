@@ -1,13 +1,12 @@
-# digitalocean-api-broker
-a simple proxy to provide control over API requests to Digital Ocean. Allows you to obfuscate the API key from end users (useful in a development organization), as well as log requests.
+# basic_auth_proxy
+a simple proxy to provide basic auth to a HTTP service
 
 ### Usage
 ```
-node main.js
+node main.js --proxy_target="http://something.tld/" --basic_auth_user="foo" --basic_auth_pass="bar"
 ```
 
 ### Requirements
 * colors
 * http-proxy
-
-`DIGITALOCEAN_TOKEN` set as an environment variable at runtime. This should be your Digital Ocean API V2 key.
+* yargs
